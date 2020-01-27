@@ -49,32 +49,12 @@ func index(w http.ResponseWriter,r *http.Request){
 	if err!=nil{log.Println(err)}else{
 		result,_:=ioutil.ReadAll(res.Body)
 		body:=string(result)
-		//log.Println(body)
 		bodyArray:=strings.Fields(body)
 		status:=strings.Split(bodyArray[1],":")[1]
 		value:=strings.Split(bodyArray[7],":")[1]
-		log.Println(status)
 		if status=="true,"{
-			log.Println("status:true")
 			finalVal,err:=strconv.ParseFloat(value,7)
-			log.Println(finalVal*c4)
 			if err!=nil{log.Println(err);}else{fmt.Fprintf(w,"%v", finalVal*c4)}
 		}else{}
-		//successValue:=bodyArray[1]
-		//if 
-		// m:=make(map[string]string)
-		// err:=json.Unmarshal(result,&m)
-		// if err!=nil{
-		// 	log.Println(err)
-		// }else{log.Println(m)}
-		// log.Println(m)
-		//log.Println(strings.SplitN(body,"success",-1))
-		// log.Println(reflect.TypeOf(body))}
 	}
-		//content,err:=ioutil.ReadFile("./src/index.html")
-	// if err!=nil{
-	// 	log.Println(err)
-	// }else{
-	// 	fmt.Fprintf(w,string(content))
-	// }
 }

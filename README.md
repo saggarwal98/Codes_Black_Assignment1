@@ -1,1 +1,1 @@
-The executable file is in src folder. Execute it with "go run main.go". The server will start listening on port 3000 and the free version of third party api used supports few currency conversions. The currency must be converted from USD.
+The executable file is in src folder. Execute it with "go run main.go". The server will start listening on port 3000 and the free version of third party api used supports few currency conversions. The currency must be converted from base currency USD.
